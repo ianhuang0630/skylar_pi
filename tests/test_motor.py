@@ -2,11 +2,11 @@ from Tkinter import *
 import RPi.GPIO as GPIO
 import time
 
-GPIO_PIN = 1
-GPIO.setmode(GPIO.BCM)
+GPIO_PIN = 03
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(GPIO_PIN, GPIO.OUT)
 pwm = GPIO.PWM(GPIO_PIN, 100)
-pwm.start(5)
+pwm.start(0)
 
 class App:
 
